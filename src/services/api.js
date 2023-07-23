@@ -2,17 +2,6 @@ import axios from "axios";
 
 const baseUrl = "http://localhost:8080";
 
-Axios({
-    method: "POST",
-    url: "http://localhost:8080/item",
-    data: { jsonObject },
-    headers: {
-        "Content-Type": "application/json"
-    },
-    withCredentials: true
-}).then(res => {
-    console.log(res.data.message);
-});
 
 export const authenticate = async (username, password) => {
     try {

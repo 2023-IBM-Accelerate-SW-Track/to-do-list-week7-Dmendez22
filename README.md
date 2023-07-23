@@ -308,5 +308,3 @@ To continue to improve the security of the TODO app, we might:
 ### Optional Exercise
 
 - Try to set up a simple authentication for the TODO app using [IBM Cloud App ID](https://cloud.ibm.com/docs/appid?topic=appid-getting-started) service by using the [tutorial](https://cloud.ibm.com/docs/appid?topic=appid-web-node).
-
-test

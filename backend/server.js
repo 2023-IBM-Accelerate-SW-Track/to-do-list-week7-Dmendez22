@@ -21,7 +21,6 @@ app.use(cors({
   credentials: true,
   origin: 'http://localhost:3000'
 }));
-app.use(cookieParser("82e4e438a0705fabf61f9854e3b575af"));
 
 //pasted secondPart Here
 app.get("/authenticate", auth, (req, res) => {
@@ -42,6 +41,11 @@ app.get("/logout", (req, res) => {
   res.end();
 });
 
+app.post("/items", cookieAuth, addItem);
+
+app.get("/items", cookieAuth, getItems);
+
+app.get("/items/search", cookieAuth, searchItems);
 
 //Init code for Cloudant
 const { CloudantV1 } = require('@ibm-cloud/cloudant');
